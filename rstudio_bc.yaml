@@ -10,7 +10,7 @@ spec:
     type: Git
     git:
       uri: https://github.com/motorox/rstudio-openshift.git
-      ref: dev
+      ref: master
     contextDir: server
   strategy:
     dockerStrategy:
