@@ -104,7 +104,7 @@ objects:
     name: alpine-python3
 
 ####################
-- apiVersion: v1
+- apiVersion: build.openshift.io/v1
   kind: BuildConfig
   metadata:
     name: alpine-python3
@@ -113,7 +113,8 @@ objects:
       template.alpha.openshift.io/wait-for-ready: "true"
   spec:
     source:
-      dockerfile: "FROM python:3.13-alpine"
+      type: Dockerfile
+      dockerfile: "FROM alpine:latest \n RUN apk --no-cache add python3"
     strategy:
       type: Docker
     output:
