@@ -47,8 +47,6 @@ COPY start.sh /usr/local/bin/start.sh
 COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
 COPY .Renviron $HOME/.Renviron
 
-RUN export
-RUN echo $USERNAME
 #OpenShift additions
 RUN if [ "$USERNAME" != "rstudio" ] ; then useradd -m $USERNAME ; fi
 

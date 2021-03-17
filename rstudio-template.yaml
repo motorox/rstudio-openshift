@@ -113,7 +113,7 @@ objects:
       template.alpha.openshift.io/wait-for-ready: "true"
   spec:
     source:
-      dockerfile: "FROM alpine:latest \n RUN apk --no-cache add python3"
+      dockerfile: "FROM python:3.13-alpine"
     strategy:
       type: Docker
     output:
