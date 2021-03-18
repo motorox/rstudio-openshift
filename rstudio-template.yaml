@@ -115,9 +115,9 @@ objects:
     source:
       type: Git
       git:
-        uri: https://github.com/docker-library/python.git
-        ref: master
-      contextDir: /tree/ec67f96b61c55ba35acd6c553f21641c5bf0ccc5/3.9/buster
+        uri: https://github.com/motorox/rstudio-openshift.git
+        ref: dev
+      contextDir: alpine
     strategy:
       type: Docker
     output:
