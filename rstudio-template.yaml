@@ -113,8 +113,11 @@ objects:
       template.alpha.openshift.io/wait-for-ready: "true"
   spec:
     source:
-      type: Dockerfile
-      dockerfile: "FROM alpine:latest \n RUN apk --no-cache add python3"
+      type: Git
+      git:
+        uri: https://github.com/docker-library/python.git
+        ref: master
+      contextDir: /tree/ec67f96b61c55ba35acd6c553f21641c5bf0ccc5/3.9/buster
     strategy:
       type: Docker
     output:
